@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --bgColor: hsl(233, 47%, 7%);
+  --cardColor: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --text: hsla(0, 0%, 100%, 0.75);
+  --stats: hsla(0, 0%, 100%, 0.6);
+  --font-inter: 'Inter', sans-serif;
+  --font-lexend: 'Lexend Deca', sans-serif;
+}
+
+body {
+  background-color: var(--bgColor);
+  color: #fff;
+}
+
+.container {
+  font-size: 15px;
+  background: var(--bgColor);
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  padding: 3rem 0;
+}
+
+.template {
+  background: var(--cardColor);
+  width: 85%;
+  height: auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.template .imageContainer {
+  background-image: url(../images/image-header-mobile.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 100%;
+  background-color: var(--accent);
+  background-blend-mode: multiply;
+}
+
+.template .cardBody {
+  background: var(--cardColor);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.template .cardTitle {
+  font-size: 1.8rem;
+  font-family: var(--font-lexend);
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.template .cardTitle span {
+  font-size: 2rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.template .cardTitle span:hover {
+  border-bottom: 1px solid var(--accent);
+}
+
+.template .cardText {
+  font-family: var(--font-inter);
+  color: var(--text);
+  margin: 1rem 0 2rem;
+}
+
+.template .cardStats {
+  font-family: var(--font-lexend);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.template .cardStats .cardStatsOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.template .cardStats .cardStatsOne span {
+  font-size: 1rem;
+  color: var(--stats);
+}
+
+@media (min-width: 860px) {
+  .template {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    min-height: 65%;
+  }
+  .container {
+    height: 100vh;
+  }
+  .container .imageContainer {
+    background-image: url(../images/image-header-desktop.jpg);
+    padding-top: 0;
+    padding-left: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .container .cardBody {
+    padding: 5rem;
+  }
+  .container .cardStats {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-top: 6rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--stats);
+  margin-top: 2rem;
+}
+
+.attribution a {
+  color: var(--accent);
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
