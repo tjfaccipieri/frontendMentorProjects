@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+  --bg-grad-1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --bg-grad-2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  --red: hsl(0, 93%, 68%);
+  --light-red: hsl(0, 36%, 70%);
+  --gray: hsl(0, 6%, 24%)
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+
+  .container{
+    min-width: 375px;
+    height: 100%;
+    min-height: 100vh;
+    background: var(--bg-grad-1);
+
+    .logo{
+      background: #FFF;
+      margin: 2rem;
+
+      img {
+        transform: scale(0.75);
+      }
+    }
+
+    .hero-image {
+      background-image: url(../images/hero-mobile.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 250px;
+      margin-bottom: 60px;
+    }
+
+    .lg-text {
+      text-align: center;
+      font-size: 2.5rem;
+      line-height: 2.8rem;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--gray);
+
+      span {
+        font-weight: 300;
+        color: var(--light-red)
+      }
+    }
+
+    .sm-text {
+      font-weight: 400;
+      color: var(--light-red);
+      text-align: center;
+      margin: 0 30px;
+      font-size: 0.875rem;
+    }
+
+    .form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 25px auto;
+
+      input {
+        height: 45px;
+        border-radius: 5rem;
+        width: 75%;
+        border: 1px solid var(--light-red);
+        outline: none;
+        padding-left: 1rem;
+      }
+
+      .button{
+        button{
+          position: absolute;
+          background: var(--red);
+          height: 45px;
+          border-radius: 5rem;
+          width: 65px;
+          border: 1px solid var(--bg-grad-2);
+          outline: none;
+          top: 0;
+          right: 10%;
+            &:hover{
+              background: var(--bg-grad-2);
+            }
+            img{
+              transform: scale(.6);
+            }
+        }
+      }
+    }
+  }
+
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
