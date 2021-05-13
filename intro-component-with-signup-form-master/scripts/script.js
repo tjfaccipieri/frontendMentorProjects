@@ -19,12 +19,31 @@ btn.addEventListener('click', () => {
   }
 });
 
-/* Data Validation */
-//First name validation//
-firstName.addEventListener('keyup', () => {
-  if (firstName.value.length < 2) {
+function checkForm() {
+  if (email.value == '') {
+    labelEmail.setAttribute('style', 'color:hsl(0, 100%, 74%)');
+    labelEmail.innerHTML = 'Email cannot be null';
+    email.setAttribute(
+      'style',
+      'border-color:hsl(0, 100%, 74%);margin-bottom:3rem'
+    );
+  } else {
+    if (email.value.match(pattern)) {
+      labelEmail.innerHTML = '';
+      email.setAttribute('style', 'border-color:hsl(154, 68%, 32%)');
+    } else {
+      labelEmail.setAttribute('style', 'color:hsl(0, 100%, 74%)');
+      labelEmail.innerHTML = 'Looks like this is not an email';
+      email.setAttribute(
+        'style',
+        'border-color:hsl(0, 100%, 74%);margin-bottom:3rem'
+      );
+    }
+  }
+
+  if (firstName.value.length == '') {
     labelName.setAttribute('style', 'color:hsl(0, 100%, 74%)');
-    labelName.innerHTML = 'First Name / please insert at least 2 characters';
+    labelName.innerHTML = 'First Name cannot be null';
     firstName.setAttribute(
       'style',
       'border-color:hsl(0, 100%, 74%);margin-bottom:3rem'
@@ -33,12 +52,10 @@ firstName.addEventListener('keyup', () => {
     labelName.innerHTML = '';
     firstName.setAttribute('style', 'border-color:hsl(154, 68%, 32%)');
   }
-});
-//Last name validation//
-lastName.addEventListener('keyup', () => {
-  if (lastName.value.length < 2) {
+
+  if (lastName.value.length == '') {
     labelLastName.setAttribute('style', 'color:hsl(0, 100%, 74%)');
-    labelLastName.innerHTML = 'Last Name / please insert at least 2 characters';
+    labelLastName.innerHTML = 'Last Name cannot be null';
     lastName.setAttribute(
       'style',
       'border-color:hsl(0, 100%, 74%);margin-bottom:3rem'
@@ -47,23 +64,10 @@ lastName.addEventListener('keyup', () => {
     labelLastName.innerHTML = '';
     lastName.setAttribute('style', 'border-color:hsl(154, 68%, 32%)');
   }
-});
-//Email validation//
-// email.addEventListener('keyup', () => {
-//   if (email.value.length < 1) {
-//     labelEmail.setAttribute('style', 'color:hsl(0, 100%, 74%)');
-//     labelEmail.innerHTML = 'Email / cannot be null';
-//     email.setAttribute('style', 'border-color:hsl(0, 100%, 74%);margin-bottom:3rem');
-//   } else {
-//     labelEmail.innerHTML = '';
-//     email.setAttribute('style', 'border-color:hsl(154, 68%, 32%)');
-//   }
-// });
-//Password validation//
-password.addEventListener('keyup', () => {
-  if (password.value.length <= 6) {
+
+  if (password.value.length == '') {
     labelPassword.setAttribute('style', 'color:hsl(0, 100%, 74%)');
-    labelPassword.innerHTML = 'Password / need to be bigger than 6 chars';
+    labelPassword.innerHTML = 'Password cannot be null';
     password.setAttribute(
       'style',
       'border-color:hsl(0, 100%, 74%);margin-bottom:3rem'
@@ -72,20 +76,4 @@ password.addEventListener('keyup', () => {
     labelPassword.innerHTML = '';
     password.setAttribute('style', 'border-color:hsl(154, 68%, 32%)');
   }
-});
-
-//ainda falta fazer a validação do e-mail
-
-email.addEventListener('keyup', () => {
-  if (email.value.match(pattern)) {
-    labelEmail.innerHTML = '';
-    email.setAttribute('style', 'border-color:hsl(154, 68%, 32%)');
-  } else {
-    labelEmail.setAttribute('style', 'color:hsl(0, 100%, 74%)');
-    labelEmail.innerHTML = 'Email / invalid email';
-    email.setAttribute(
-      'style',
-      'border-color:hsl(0, 100%, 74%);margin-bottom:3rem'
-    );
-  }
-});
+}
