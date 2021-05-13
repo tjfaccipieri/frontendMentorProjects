@@ -18,8 +18,8 @@
 body {
   background-image: url(../images/bg-intro-mobile.png);
   background-color: rgba(255, 122, 122, 0.856);
-  background-repeat: no-repeat;
-  background-size: auto;
+  background-repeat: round;
+  
 
   .container {
     display: flex;
@@ -159,6 +159,8 @@ footer {
 @media (min-width: 860px) {
   body {
     background-image: url(../images/bg-intro-desktop.png);
+    // background-size: cover;
+    background-repeat: round;
     height: 100%;
     min-height: 100vh;
     display: flex;
