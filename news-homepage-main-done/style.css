@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+:root {
+  --soft-orange: #e9ab53;
+  --soft-red: #f15e50;
+  --off-white: #fffdfa;
+  --grayish-blue: #c5c6ce;
+  --dark-grayish-blue: #5d5f79;
+  --dark-blue: #00001a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  background-color: var(--off-white);
+}
+
+p {
+  font-size: 15px;
+}
+
+.container {
+  color: var(--dark-blue);
+  display: block;
+  margin: 0 auto;
+  width: calc(1440px - 15%);
+}
+.container nav {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container nav .toogle {
+  display: none;
+}
+.container nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  color: var(--dark-grayish-blue);
+}
+.container nav ul li:hover {
+  color: var(--soft-red);
+  cursor: pointer;
+}
+.container main {
+  display: flex;
+  gap: 1.5rem;
+}
+.container main .left {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.container main .left .image {
+  width: 100%;
+  height: 320px;
+  background-image: url("./assets/images/image-web-3-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container main .left .hero {
+  display: flex;
+  gap: 1rem;
+}
+.container main .left .hero .title {
+  flex: 1;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--dark-blue);
+  letter-spacing: 1px;
+}
+.container main .left .hero .text {
+  flex: 1;
+  color: var(--dark-grayish-blue);
+  padding: 0.5rem;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container main .left .hero .text button {
+  padding: 0.75rem 0;
+  cursor: pointer;
+  background-color: var(--soft-red);
+  border: none;
+  color: var(--off-white);
+  font-weight: 800;
+  letter-spacing: 4px;
+  width: 50%;
+}
+.container main .left .hero .text button:hover {
+  background-color: var(--dark-blue);
+}
+.container main .right {
+  flex: 2;
+  background-color: var(--dark-blue);
+  color: var(--off-white);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.container main .right h2 {
+  color: var(--soft-orange);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  margin: 1rem;
+}
+.container main .right .card {
+  margin: 1rem;
+  border-bottom: 1px solid var(--grayish-blue);
+}
+.container main .right .card:last-child {
+  border: none;
+}
+.container main .right .card .title {
+  color: var(--off-white);
+  font-weight: 800;
+  font-size: 1rem;
+}
+.container main .right .card .title:hover {
+  cursor: pointer;
+  color: var(--soft-orange);
+}
+.container main .right .card .text {
+  margin-top: 1rem;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--grayish-blue);
+  margin-bottom: 2rem;
+}
+.container .bottom {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  justify-content: space-between;
+}
+.container .bottom .card {
+  display: flex;
+  gap: 1rem;
+  height: 8rem;
+}
+.container .bottom .card .innerCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.725rem;
+}
+.container .bottom .card .innerCard .number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--grayish-blue);
+}
+.container .bottom .card .innerCard .title {
+  color: var(--dark-blue);
+  font-weight: 800;
+}
+.container .bottom .card .innerCard .title:hover {
+  cursor: pointer;
+  color: var(--soft-red);
+}
+.container .bottom .card .innerCard .subtitle {
+  font-size: 15px;
+  color: var(--dark-grayish-blue);
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .container nav ul {
+    position: absolute;
+    top: 10%;
+    right: -100%;
+    width: 60%;
+    height: 100vh;
+    padding: 2rem;
+    text-align: left;
+    overflow: auto;
+    background: var(--off-white);
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+  .container nav.active ul {
+    opacity: 1;
+    right: 0;
+  }
+  .container nav .toogle {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image: url("https://img.icons8.com/material-outlined/48/000000/menu--v1.png");
+    cursor: pointer;
+  }
+  .container nav.active .toogle {
+    background-image: url("https://img.icons8.com/material-outlined/48/000000/multiply--v1.png");
+    background-repeat: no-repeat;
+  }
+  .container main {
+    flex-direction: column;
+  }
+  .container main .left .image {
+    background-image: url("./assets/images/image-web-3-mobile.jpg");
+  }
+  .container main .left .hero {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .container main .left .hero .text {
+    gap: 1rem;
+  }
+  .container .bottom {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .container .bottom .card {
+    display: flex;
+  }
+  .container .bottom .card img {
+    width: 30%;
+  }
+}/*# sourceMappingURL=style.css.map */

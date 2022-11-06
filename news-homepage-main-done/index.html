@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | News homepage</title>
+  </head>
+  <body class="container">
+    <nav class="menu">
+      <img src="./assets/images/logo.svg" alt="" />
+      <ul >
+        <li>Home</li>
+        <li>New</li>
+        <li>Popular</li>
+        <li>Trending</li>
+        <li>Categories</li>
+      </ul>
+      <div class="toogle" onclick="toogle()">
+
+      </div>
+    </nav>
+
+    <main>
+      <div class="left">
+        <div class="image"></div>
+        <div class="hero">
+          <h1 class="title">
+            The Bright <br />
+            Future of <br />
+            Web 3.0?
+          </h1>
+
+          <div class="text">
+            <p>
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <button class="actionButton">Read more</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <h2>New</h2>
+
+        <div class="card">
+          <span class="title">Hydrogen VS Electric Cars</span>
+          <p class="text">Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </div>
+        <div class="card">
+          <span class="title">The Downsides of AI Artistry</span>
+          <p class="text">
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+        </div>
+        <div class="card">
+          <span class="title">Is VC Funding Drying Up?</span>
+          <p class="text">
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <div class="bottom">
+      <div class="card">
+        <img src="./assets/images/image-retro-pcs.jpg" alt="" />
+        <div class="innerCard">
+          <div class="number">01</div>
+          <div class="title">Reviving Retro PCs</div>
+          <div class="subtitle">
+            What happens when old PCs are given modern upgrades?
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./assets/images/image-top-laptops.jpg" alt="" />
+        <div class="innerCard">
+          <div class="number">02</div>
+          <div class="title">Top 10 Laptops of 2022</div>
+          <div class="subtitle">
+            Our best picks for various needs and budgets.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./assets/images/image-gaming-growth.jpg" alt="" />
+        <div class="innerCard">
+          <div class="number">03</div>
+          <div class="title">The Growth of Gaming</div>
+          <div class="subtitle">
+            How the pandemic has sparked fresh opportunities.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toogle() {
+        let header = document.querySelector('.menu');
+        header.classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>
